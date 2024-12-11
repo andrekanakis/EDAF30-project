@@ -1,7 +1,8 @@
 #ifndef EDGE_H
 #define EDGE_H
 
-#include "node.h"
+
+class Node;
 
 class Edge{
 public:
@@ -20,4 +21,4 @@ private:
 
 };
 
-#endif;
+#endif

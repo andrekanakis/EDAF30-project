@@ -2,6 +2,8 @@
 #define NODE_H
 
 #include "edge.h"
+#include <string>
+
 
 class Node{
 public:
@@ -28,4 +30,4 @@ private:
 
 };
 
-#endif;
+#endif
