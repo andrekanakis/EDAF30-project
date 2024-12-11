@@ -9,6 +9,8 @@
 class Node{
 public:
 
+    static const int max_value = std::numeric_limits<int>::max();
+
     Node(const std::string& name);
 
     /** Hämtar nodens namn. */

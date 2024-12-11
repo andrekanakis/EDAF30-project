@@ -2,13 +2,7 @@
 #include <vector>
 #include <string>
 
-std::string name;
-int val;
-std::vector<Edge> edges;
-
-Node::Node(const std::string& name){
-    this->name = name;
-}
+Node::Node(const std::string& name) : name(name), val(Node::max_value) {}
 
 /** Hämtar nodens namn. */
 std::string Node::getName() const{
