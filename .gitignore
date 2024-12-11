@@ -6,6 +6,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos,c++,cmake,c,linux,git
 
 ### VisualStudioCode ###
+/.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
