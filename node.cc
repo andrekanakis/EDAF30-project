@@ -2,6 +2,10 @@
 #include <vector>
 #include <string>
 
+std::string name;
+int val;
+std::vector<Edge> edges;
+
 Node::Node(const std::string& name){
 
 }

@@ -27,7 +27,9 @@ public:
     const std::vector<Edge>& getEdges() const;
 
 private:
-
+    std::string name;
+    int val;
+    std::vector<Edge> edges;
 };
 
 #endif
