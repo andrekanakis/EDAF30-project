@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cassert>
-#include "graph.h"
+#include "../graph.h"
 #include <algorithm>
 #include <utility>
 #include <set>

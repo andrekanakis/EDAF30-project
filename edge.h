@@ -10,7 +10,7 @@ public:
     Edge(Node* destination, int length);
 
     /** Hämtar bågens destination. */
-    Node* getDestination();
+    Node* getDest();
 
     /** Hämtar bågens längd. */
     int getLength() const;
