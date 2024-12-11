@@ -1,5 +1,6 @@
 # Custom ignores
 **/build
+CMakeLists.txt
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos,c++,cmake,c,linux,git

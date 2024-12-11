@@ -5,6 +5,8 @@
 #include <utility>
 #include <set>
 
+#define INFO
+
 using std::cout;
 using std::endl;
 
@@ -15,8 +17,7 @@ void test_node_and_edge()
     assert(n.getEdges().size() == 0);
     assert(n.getValue() == Node::max_value);
 
-    Node m("Test2");
-    assert(m.getName() == "Test2");
+    Node m("Test2"); assert(m.getName() == "Test2");
     assert(m.getEdges().size() == 0);
     assert(m.getValue() == Node::max_value);
 
