@@ -1,4 +1,5 @@
 #include "graph.h"
+#include <iostream>
 #include <memory>
 #include <string>
 #include <sstream>
@@ -41,18 +42,22 @@ Graph::Graph(std::istream& in) {
         std::istringstream iss(line);
         std::string from;
         std::string to;
-        int distance;
-        char colon;
+        int distance = 0;
 
-        if (iss >> from >> colon >> distance >> to) {
-            addNode(from);
-            addNode(to);
+        if (std::getline(iss, from, ':')) {
+            if (iss >> distance) {
+                std::getline(iss >> std::ws, to);
 
-            Node* fromNode = find(from);
-            Node* toNode = find(to);
-            if (fromNode && toNode) {
-                fromNode->addEdge(toNode, distance);
+                addNode(from);
+                addNode(to);
+                Node* fromNode = find(from);
+                Node* toNode = find(to);
+                if (fromNode && toNode) {
+                    fromNode->addEdge(toNode, distance);
+                }
             }
         }
+
+        std::cout << "From: " << from << ", to: " << to <<", dist: " << distance << '\n';
     }
 }

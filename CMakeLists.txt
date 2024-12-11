@@ -27,7 +27,8 @@ add_compile_options(
 set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
-add_executable(main test/test_graph_small.cc node.cc edge.cc)
+add_executable(test_smapp test/test_graph_small.cc node.cc edge.cc)
 add_executable(test_nodeset node.cc nodeset.cc edge.cc test/test_nodeset.cc)
 add_executable(dijkstra node.cc nodeset.cc edge.cc dijkstra.cc test/test_dijkstra.cc)
 add_executable(nofile graph.cc node.cc edge.cc dijkstra.cc nodeset.cc test/test_graph_nofile.cc)
+add_executable(main main.cc node.cc edge.cc nodeset.cc graph.cc dijkstra.cc)
