@@ -7,6 +7,9 @@ bool NodeSet::isEmpty() {
 }
 
 void NodeSet::add(Node* node) {
+    for (Node* n : nodes) {
+        if (n->getName() == node->getName()) return;
+    }
     nodes.push_back(node);
 }
 
