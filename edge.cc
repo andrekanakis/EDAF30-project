@@ -1,6 +1,6 @@
 #include "edge.h"
 
-Node* dest;
+const Node* dest;
 int len;
 
 
@@ -11,7 +11,7 @@ Edge::Edge(Node* destination, int length){
 }
 
 /** Hämtar bågens destination. */
-Node* Edge::getDest(){
+Node* Edge::getDest() const {
     return dest;
 }
 
