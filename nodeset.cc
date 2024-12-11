@@ -1,25 +1,23 @@
 #include "nodeset.h"
 
-std::vector<Node*> nodes;
-
 NodeSet::NodeSet(){}
 
-bool isEmpty() {
+bool NodeSet::isEmpty() {
     return nodes.empty(); 
 }
 
-void add(Node* node) {
+void NodeSet::add(Node* node) {
     nodes.push_back(node);
 }
 
-Node* removeMin() {
+Node* NodeSet::removeMin() {
     if (isEmpty()) return nullptr;
-    int size = nodes[0]->getValue();
+    int smallest = nodes[0]->getValue();
     Node* smallestNode = nodes[0];
     int index = 0;
     for (size_t i = 0; i < nodes.size(); ++i) {
-        if (nodes[i]->getValue() < size) {
-            size = nodes[i]->getValue();
+        if (nodes[i]->getValue() < smallest) {
+            smallest = nodes[i]->getValue();
             smallestNode = nodes[i];
             index = i;
         }

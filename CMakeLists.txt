@@ -28,3 +28,4 @@ set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 add_executable(main test/test_graph_small.cc node.cc edge.cc)
+add_executable(test_nodeset node.cc nodeset.cc edge.cc test/test_nodeset.cc)
