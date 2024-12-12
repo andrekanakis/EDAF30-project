@@ -5,6 +5,23 @@
 
 using std::cout;
 
+void printPath(Node* dest) {
+    std::vector<Node*> path;
+
+    Node* current = dest;
+    while (current != nullptr) {
+        path.push_back(current);
+        current = current->getParent();
+    }
+
+    for (auto& p : path) {
+        std::cout << p->getName() << ' ';
+    }
+
+    std::cout << dest->getValue() << '\n';
+
+}
+
 int main() {
     std::ifstream file("../graph.txt");
     if (!file) {
@@ -44,6 +61,7 @@ int main() {
             cout << "No path exists! Better luck next time!\n";
         } else {
             cout << "Path from: " << start << " to: " << dest << " is " << distance << " km long!\n";
+            printPath(destNode);
         }
     }
     return 0;

@@ -3,6 +3,7 @@
 
 void dijkstra(Node* start) {
     start->setValue(0);
+    start->setParent(nullptr);
 
     NodeSet nodes;
     nodes.add(start);
@@ -16,6 +17,7 @@ void dijkstra(Node* start) {
 
             if (newDistance < dest->getValue()) {
                 dest->setValue(newDistance);
+                dest->setParent(current);
                 nodes.add(dest);
             }
         }

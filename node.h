@@ -30,10 +30,14 @@ public:
     /** Hämtar de bågar som utgår från denna nod. */
     const std::vector<Edge>& getEdges() const;
 
+    void setParent(Node* node);
+    Node* getParent() const;
+
 private:
     std::string name;
     int val;
     std::vector<Edge> edges;
+    Node* parent {nullptr};
 };
 
 #endif
