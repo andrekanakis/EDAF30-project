@@ -16,15 +16,12 @@ public:
     Node* find(const std::string& name);
     void resetVals();
 
-
     using iterator = std::vector<std::unique_ptr<Node>>::iterator;
     iterator begin();
     iterator end();
 
-
 private:
     std::vector<std::unique_ptr<Node>> nodes;
 };
-
 
 #endif

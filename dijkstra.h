@@ -17,7 +17,7 @@ void dijkstra(Node* start, const CostFunction& costFunc) {
         for (const Edge& edge : current->getEdges()) {
             Node* dest = edge.getDest();
             int newDist = current->getValue() + costFunc(current, edge);
-            
+
             if (newDist < dest->getValue()) {
                 dest->setValue(newDist);
                 dest->setParent(current);

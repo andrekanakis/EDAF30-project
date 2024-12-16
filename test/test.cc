@@ -4,7 +4,6 @@
 #include <cassert>
 #include <fstream>
 #include <iostream>
-#include <sstream>
 
 void test_shortest_distance(Graph& g) {
     std::cout << "Testing shortest distance between Lund and Veberod\n";

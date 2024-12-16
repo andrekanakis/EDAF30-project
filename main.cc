@@ -76,7 +76,9 @@ int main() {
         if (result == Node::max_value) {
             cout << "No path exists! Better luck next time!\n";
         } else {
-            cout << "from: " << start << " to: " << dest << " is " << result << " km long!\n";
+            cout << "from: " << start << " to: " << dest << " is " << result; 
+            if (choice == 1) cout << " km long\n";
+            if (choice == 2) cout << " cities passed\n";
             printPath(destNode);
         }
     }
