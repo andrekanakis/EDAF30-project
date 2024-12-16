@@ -2,6 +2,7 @@
 #include <cassert>
 #include "../graph.h"
 #include "../dijkstra.h"
+#include "../cost_functions.h"
 
 #define INFO
 
@@ -26,7 +27,7 @@ void test()
     sandby.addEdge(&flyinge,4);
     hallestad.addEdge(&veberod,8);
 
-    dijkstra(&lund);
+    dijkstra(&lund, DistanceCost());
 
     assert(lund.getValue() == 0);
     assert(dalby.getValue() == 12);

@@ -2,6 +2,7 @@
 #include "graph.h"
 #include <iostream>
 #include <fstream>
+#include "cost_functions.h"
 
 using std::cout;
 
@@ -32,7 +33,13 @@ int main() {
     Graph g(file);
 
     while (true) {
-        cout << "Calc the shortest dist between 2 cities\n";
+        cout << "Choose functionm method\n";
+        cout << "1. Shortest distance\n";
+        cout << "2. Fewest cities passed\n";
+        int choice;
+        std::cin >> choice;
+        std::cin.ignore();
+
         cout << "Enter start city: ";
         std::string start;
         std::getline(std::cin, start);
@@ -54,13 +61,22 @@ int main() {
         }
 
         g.resetVals();
-        dijkstra(startNode);
+        if (choice == 1) {
+            dijkstra(startNode, DistanceCost());
+            cout << "Shortest distance path: ";
+        } else if (choice == 2) {
+            dijkstra(startNode, CitiesPassedCost());
+            cout << "Fewest cities passed path: ";
+        } else {
+            cout << "Wrong input, try again\n";
+            continue;
+        }
 
-        int distance = destNode->getValue();
-        if (distance == Node::max_value) {
+        int result = destNode->getValue();
+        if (result == Node::max_value) {
             cout << "No path exists! Better luck next time!\n";
         } else {
-            cout << "Path from: " << start << " to: " << dest << " is " << distance << " km long!\n";
+            cout << "from: " << start << " to: " << dest << " is " << result << " km long!\n";
             printPath(destNode);
         }
     }

@@ -58,6 +58,6 @@ Graph::Graph(std::istream& in) {
             }
         }
 
-        std::cout << "From: " << from << ", to: " << to <<", dist: " << distance << '\n';
+        /*std::cout << "From: " << from << ", to: " << to <<", dist: " << distance << '\n';*/
     }
 }
