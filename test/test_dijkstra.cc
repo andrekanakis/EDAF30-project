@@ -4,8 +4,6 @@
 #include "../dijkstra.h"
 #include "../cost_functions.h"
 
-#define INFO
-
 using std::cout;
 using std::endl;
 
@@ -45,7 +43,7 @@ void test()
         cout << endl;
     }
 #endif
-    cout << "test_dijkstra passed" << endl;
+    cout << "test_dijkstra passed!" << endl;
 }
 
 

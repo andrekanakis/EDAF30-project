@@ -5,8 +5,6 @@
 #include <utility>
 #include <set>
 
-#define INFO
-
 using std::cout;
 using std::endl;
 
@@ -33,16 +31,16 @@ void test_node_and_edge()
     assert(n.getValue() == Node::max_value);
     assert(m.getValue() == 42);
 
-    cout << "test_node_and_edge passed" << endl;
+    std::cout << "test_graph_small/test_node_and_edge passed!\n";
 }
 
-void print_neighbours(Node* n)
-{
-    cout << "Anslutningar från " << n->getName() << "(" << n->getValue() << ") :\n";
-    for(auto de : n->getEdges()){
-        cout << de.getLength() << " to " << de.getDest()->getName() << endl;
-    }
-}
+/*void print_neighbours(Node* n)*/
+/*{*/
+/*    cout << "Anslutningar från " << n->getName() << "(" << n->getValue() << ") :\n";*/
+/*    for(auto de : n->getEdges()){*/
+/*        cout << de.getLength() << " to " << de.getDest()->getName() << endl;*/
+/*    }*/
+/*}*/
 
 void test_edges()
 {
@@ -75,7 +73,7 @@ void test_edges()
 #endif
         assert(res->second == de.getLength());
     }
-    cout << "test_edges passed" << endl;
+    cout << "test_graph_small/test_edges passed!" << endl;
 }
 
 

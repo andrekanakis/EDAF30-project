@@ -6,24 +6,24 @@
 #include <iostream>
 
 void test_shortest_distance(Graph& g) {
-    std::cout << "Testing shortest distance between Lund and Veberod\n";
+    /*std::cout << "Testing shortest distance between Lund and Veberod\n";*/
     Node* start = g.find("Lund");
     Node* end = g.find("Veberod");
 
     g.resetVals();
     dijkstra(start, DistanceCost());
     assert(end->getValue() == 23); // Lund -> Dalby -> Veberod = 12 + 11 = 23
-    std::cout << "Shortest path correct! Expected: 23, Got: " << end->getValue() << '\n';
+    /*std::cout << "Shortest path correct! Expected: 23, Got: " << end->getValue() << '\n';*/
 }
 
 void test_few_cities(Graph& g) {
-    std::cout << "Testing fewest cities between Lund and Veberod\n";
+    /*std::cout << "Testing fewest cities between Lund and Veberod\n";*/
     Node* start = g.find("Lund");
     Node* end = g.find("Veberod");
     g.resetVals();
     dijkstra(start, CitiesPassedCost());
     assert(end->getValue() == 2);// Passes through Dalby
-    std::cout << "Cities passed correct! Expected: 2, Got: " << end->getValue() << '\n';
+    /*std::cout << "Cities passed correct! Expected: 2, Got: " << end->getValue() << '\n';*/
 }
 
 int main() {
@@ -38,7 +38,7 @@ int main() {
     test_shortest_distance(g);
     test_few_cities(g);
 
-    std::cout << "All test passed!";
+    std::cout << "test_general passed!\n";
 
     return 0;
 }

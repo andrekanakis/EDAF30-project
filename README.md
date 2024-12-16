@@ -20,3 +20,4 @@ Instruktioner:
 2. Kör CMAKE, kan använda flaggor för debug. `cmake -DCMAKE_BUILD_TYPE=Debug ..`
 3. När CMAKE är klart så kör du make `make`. 
 4. Du kan nu köra de olika programmen och testprogrammer i build-mappen. `./main` för att köra huvudprogrammet.
+5. Du kan köra alla test genom att vara i build-mappen och köra `make run_all_tests`

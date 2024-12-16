@@ -47,6 +47,6 @@ void test()
 int main()
 {
     test();
-    std::cout << "test_nodeset passed" << std::endl;
+    std::cout << "test_nodeset passed!" << std::endl;
     return 0;
 }
